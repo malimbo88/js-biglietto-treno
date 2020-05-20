@@ -25,7 +25,7 @@ if( eta < 18 ) {
 
 console.log(prezzoScontato)
 
-document.getElemntById("ticket").innerHtml = "Il prezzo del biglietto é " + prezzoScontato;
+document.getElementById("ticket").innerHTML = prezzoScontato.toString();
 
 
 
