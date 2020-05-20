@@ -22,8 +22,30 @@ if ( lengthPrimaParola > lengthSecondaParola ) {
 }
 
 //exercise03
-var numero = prompt("Srivi un numero");
+var numero = ("Srivi un numero");
 var numeroNumero = parseInt(numero);
 
-console.log(numero);
-console.log(numeroNumero);
+if ( isNaN(numeroNumero) ) {
+
+}
+
+//ercizio04
+var data = new Date();
+
+
+//esercizio5
+var = numeroUtente = prompt("Scegli un numero tra 1 e 9");
+var = numeroUtenteNumero = parseInt(numeroUtente);
+
+console.log(numeroUtente);
+console.log(numeroUtenteNumero);
+
+
+
+
+
+
+
+
+
+//
