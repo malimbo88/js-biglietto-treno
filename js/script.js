@@ -13,19 +13,21 @@ var scontoAnziani = ( prezzo / 100 * 40 );
 
 console.log(scontoMinori, scontoAnziani)
 
-var prezzoScontato;
+var prezzoFinale;
 
 if( eta < 18 ) {
-  prezzoScontato = ( prezzo - scontoMinori )
+  prezzoFinale = ( prezzo - scontoMinori );
+  alert("Hai diritto a uno sconto del 20% che corrisponde a " + scontoMinori + " Euro");
 }else if( eta >= 65) {
-  prezzoScontato = ( prezzo - scontoAnziani )
+  prezzoFinale = ( prezzo - scontoAnziani );
+  alert("Hai diritto a uno sconto del 40% che corrisponde a " + scontoAnziani + " Euro");
 }else {
-  alert("Non hai diritto a nessuno sconto")
+  prezzoFinale = prezzo;
+  alert("Mi dispiace. Non hai diritto a nessuno sconto in base alla tua etá anagrafica. Torna quando sarai piú anziano");
 }
 
-console.log(prezzoScontato)
+document.getElementById("ticket").innerHTML = "Il prezzo del tuo biglietto e' " + prezzoFinale.toString() + " Euro";
 
-document.getElementById("ticket").innerHTML = prezzoScontato.toString();
 
 
 
