@@ -1,27 +1,31 @@
 //esercizio5
-var numeroUtente = parseInt( prompt("Scegli un numero tra 1 e 9") );
-var pariodispariUtente = prompt("Pari o dispari?");
-var numeroCpu = Math.floor(Math.random() * 9) +1;
-var sommaUtenteCpu = numeroUtente + numeroCpu;
-var risultato;
+var eta = parseInt( prompt("Quanti anni hai?"));
+var numeroKm = parseInt( prompt("Quanti Km devi percorrere?"));
 
-if( (sommaUtenteCpu % 2 ) == 0 ) {
-  risultato = "pari";
+console.log(eta, numeroKm);
+
+var prezzo = ( numeroKm * 0.21 );
+
+console.log(prezzo);
+
+var scontoMinori = ( prezzo / 100 * 20 );
+var scontoAnziani = ( prezzo / 100 * 40 );
+
+console.log(scontoMinori, scontoAnziani)
+
+var prezzoScontato;
+
+if( eta < 18 ) {
+  prezzoScontato = ( prezzo - scontoMinori )
+}else if( eta >= 65) {
+  prezzoScontato = ( prezzo - scontoAnziani )
 }else {
-  risultato = "dispari";
+  alert("Non hai diritto a nessuno sconto")
 }
 
-console.log(numeroUtente);
-console.log(pariodispariUtente);
-console.log(numeroCpu);
-console.log(sommaUtenteCpu);
-console.log(risultato);
+console.log(prezzoScontato)
 
-if(risultato == pariodispariUtente) {
-  alert("Hai azzeccato!")
-} else {
-  alert("Hai perso!")
-}
+document.getElemntById("ticket").innerHtml = "Il prezzo del biglietto é " + prezzoScontato;
 
 
 
